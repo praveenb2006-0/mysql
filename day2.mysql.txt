@@ -1,0 +1,45 @@
+a-- Create products table
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    stock INT,
+    rating DECIMAL(2,1)
+);
+
+-- Insert 20 products
+INSERT INTO products
+(product_id, product_name, category, price, stock, rating)
+VALUES
+(1, 'Wireless Headphones', 'Electronics', 2499.00, 50, 4.5),
+(2, 'Smart Watch', 'Electronics', 3999.00, 35, 4.3),
+(3, 'Bluetooth Speaker', 'Electronics', 1799.00, 40, 4.4),
+(4, 'Laptop Backpack', 'Bags', 1299.00, 75, 4.2),
+(5, 'Running Shoes', 'Footwear', 2999.00, 30, 4.6),
+(6, 'Cotton T-Shirt', 'Clothing', 699.00, 100, 4.1),
+(7, 'Jeans', 'Clothing', 1499.00, 60, 4.3),
+(8, 'Coffee Maker', 'Appliances', 3499.00, 25, 4.5),
+(9, 'Air Fryer', 'Appliances', 5999.00, 20, 4.7),
+(10, 'Water Bottle', 'Home & Kitchen', 499.00, 120, 4.4),
+(11, 'Backpack', 'Bags', 999.00, 80, 4.2),
+(12, 'Sunglasses', 'Accessories', 1199.00, 45, 4.0),
+(13, 'Desk Lamp', 'Home & Kitchen', 899.00, 55, 4.3),
+(14, 'Keyboard', 'Electronics', 1599.00, 40, 4.5),
+(15, 'Wireless Mouse', 'Electronics', 799.00, 70, 4.4),
+(16, 'Yoga Mat', 'Sports', 899.00, 65, 4.6),
+(17, 'Football', 'Sports', 699.00, 50, 4.3),
+(18, 'Novel Book', 'Books', 399.00, 90, 4.7),
+(19, 'Table Clock', 'Home & Kitchen', 599.00, 35, 4.1),
+(20, 'Power Bank', 'Electronics', 1299.00, 45, 4.5);
+
+
+-- UPDATE products set product_name='smart tv' where product_id=5;
+-- UPDATE products set category='Electronics' where product_id=5;
+-- UPDATE products set price=2000.00 where product_id=5;
+-- UPDATE products set stock=5 where product_id=5;
+-- UPDATE products set rating=4.9 where product_id=5;
+-- DELETE FROM products where product_id=3;
+-- ALTER TABLE products
+--  DROP COLUMN price;
+select * from products;
